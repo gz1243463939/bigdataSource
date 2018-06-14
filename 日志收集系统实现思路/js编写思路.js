@@ -82,6 +82,15 @@ js编程思路
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
 		
 		
@@ -95,7 +104,7 @@ js编程思路
                 this.updatePreVisitTime(new Date().getTime());
             }
             return true;
-        },
+        }
 
 		sendDataToServer: function(data) {
 				// 发送数据data到服务器，其中data是一个字符串
@@ -106,12 +115,14 @@ js编程思路
 				};
 				i2.src = this.clientConfig.serverUrl + "?" + data;
 			}
-			onLaunch: function() {
-				// 触发launch事件
-				// 设置事件名称
-				// 最终发送编码后的数据
-			}
-		 onPageView: function() {
+			
+		onLaunch: function() {
+			// 触发launch事件
+			// 设置事件名称
+			// 最终发送编码后的数据
+		}
+		
+	    onPageView: function() {
                  // 触发page view事件
                  // 设置当前url
                  // 设置前一个页面的url
