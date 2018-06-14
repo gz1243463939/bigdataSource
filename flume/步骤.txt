@@ -1,0 +1,13 @@
+Flume监听Nginx日志信息，写入到hdfs
+	1. 编写nginx配置信息
+		在nginx根目录下创建www/source文件夹，并将BfImg图片移动到该目录下。
+	2. 编写flume的agent配置信息
+	3. 移动hdfs依赖包到flume的lib文件夹中。
+	  cp ~/bigdater/hadoop-2.5.0-cdh5.3.6/share/hadoop/common/lib/commons-configuration-1.6.jar ./
+	  cp ~/bigdater/hadoop-2.5.0-cdh5.3.6/share/hadoop/common/lib/hadoop-auth-2.5.0-cdh5.3.6.jar ./
+	  cp ~/bigdater/hadoop-2.5.0-cdh5.3.6/share/hadoop/common/hadoop-common-2.5.0-cdh5.3.6.jar ./
+	  cp ~/bigdater/hadoop-2.5.0-cdh5.3.6/share/hadoop/hdfs/hadoop-hdfs-2.5.0-cdh5.3.6.jar ./
+	  
+	4. 进入flume根目录，启动flume: flume-ng agent --conf ./conf/ --conf-file ./conf/test2.conf --name agent
+	5. 发送http请求查看是否成功。
+	
